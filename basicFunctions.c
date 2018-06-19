@@ -126,18 +126,38 @@ void basicFunctions() {
         sprintf(text, "t23.txt=\"%d\"",getDiskFree());
         sendCommand(text);
 
-        //RXFrequency
-        float fx;
-        fx=RXfrequency;
-        fx/=1000000;
-        sprintf(text, "t30.txt=\"%3.4fMHz\"",fx);
-        sendCommand(text);
+    //RXFrequency
+	        float fx;
+	        fx=RXfrequency;
+	        fx/=1000000;
+	        sprintf(text, "t30.txt=\"%3.3f MHz\"",fx);
+	        sendCommand(text);
+	
 
-        //TXFrequency
-        fx=TXfrequency;
-        fx/=1000000;
-        sprintf(text, "t32.txt=\"%3.4fMHz\"",fx);
-        sendCommand(text);
+	        //TXFrequency
+	        fx=TXfrequency;
+	        fx/=1000000;
+	        sprintf(text, "t32.txt=\"%3.3f MHz\"",fx);
+	        sendCommand(text);
+	
+
+	        //Location
+	        sprintf(text, "t31.txt=\"%s\"",location);
+	        sendCommand(text);
+	
+
+	      //TXOffset
+	        fx=TXoffset;
+	        sprintf(text,"t130.txt=\"%4.0f Hz\"",fx);
+	        sendCommand(text);
+	
+
+	      //RXOffset
+	        fx=RXoffset;
+	        sprintf(text, "t132.txt=\"%4.0f Hz\"",fx);
+	        sendCommand(text);
+	
+
 
         //Location
         sprintf(text, "t31.txt=\"%s\"",location);

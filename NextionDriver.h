@@ -67,10 +67,11 @@ int gelezen;
 int check;
 int page,changepages;
 char ipaddr[100];
-unsigned int RXfrequency,TXfrequency;
-group_t groups[MAXGROUPS];
-user_t users[MAXUSERS];
-int nmbr_groups, nmbr_users;
+
+unsigned int RXfrequency,TXfrequency,RXoffset,TXoffset;
+	group_t groups[MAXGROUPS];
+	user_t users[MAXUSERS];
+	int nmbr_groups, nmbr_users;
 
 int fd1,fd2;
 int become_daemon;

@@ -68,7 +68,7 @@ void basicFunctions() {
     //       and send to display
     //  * send RX frequency and location (info from MMDVM.ini)
     //--------------------------------------------------------------
-    if ((page==0)&&(strstr(TXbuffer,"t1.txt=MMDVM STOPPED")>0)){
+    if ((page==0)&&(strstr(TXbuffer,"t1.txt=\MMDVM STOPPED\")>0)){
         sprintf(TXbuffer, "t30.txt=\"\"");
         sendCommand(text);
         sprintf(TXbuffer, "t2.txt=\"\"");

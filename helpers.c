@@ -30,13 +30,7 @@
 	#include <syslog.h>
 	#include <sys/vfs.h>
 	
-
-	#include "NextionDriver.h"
-	
-
-	
-
-	
+	#include "NextionDriver.h"	
 
 	void getNetworkInterface(char* info) {
 		const unsigned int IFLISTSIZ = 25U;

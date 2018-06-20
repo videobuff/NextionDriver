@@ -19,20 +19,20 @@
 #if !defined(NextionDriver_H)
 #define NextionDriver_H
 
-#define NextionDriver_VERSION "1.02"
+#define NextionDriver_VERSION "1.02esh"
 
 #define TRUE	1
 #define FALSE	0
 
 #define DEBUG	1
 
-#define NEXTIONPORT		"/dev/ttyAMA0"
+#define NEXTIONPORT			"/dev/ttyUSB0"
 #define NEXTIONDRIVERLINK	"/dev/ttyNextionDriver"
-#define CONFIGFILE		"/etc/MMDVM.ini"
-#define GROUPSFILE		"groups.txt"
-#define USERSFILE		"stripped.csv"
-#define MAXGROUPS	1500
-#define MAXUSERS	120000
+#define CONFIGFILE			"/etc/mmdvmhost"
+#define GROUPSFILE			"groups.txt"
+#define USERSFILE			"stripped.csv"
+#define MAXGROUPS			1500
+#define MAXUSERS			120000
 
 #define BAUDRATE3	B9600
 #define BAUDRATE4	B115200

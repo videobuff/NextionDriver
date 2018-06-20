@@ -12,7 +12,7 @@
 #########################################################
 
 #Where do we find the data files (groups and DMR is's)
-DATAFILES="/usr/local/etc/"
+DATAFILES="/opt/NextionDriver"
 
 #########################################################
 

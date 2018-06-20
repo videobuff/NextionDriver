@@ -20,9 +20,9 @@
 #define helpers_H
 
 #define DSTAR		1
-#define DMR		2
+#define DMR		    2
 #define FUSION		3
-#define P25		4
+#define P25		    4
 #define YSFDMR		5
 #define NXDN		6
 #define DSTAR_NET	7

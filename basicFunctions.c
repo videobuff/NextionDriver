@@ -146,6 +146,7 @@ void basicFunctions() {
 	        sendCommand(text);
 	
 
+
 	      //TXOffset
 	        fx=TXoffset;
 	        fx/=1;
@@ -159,12 +160,6 @@ void basicFunctions() {
 	        sprintf(text, "t132.txt=\"%4.0f Hz\"",fx);
 	        sendCommand(text);
 	
-
-
-        //Location
-        sprintf(text, "t31.txt=\"%s\"",location);
-        sendCommand(text);
-
 
         //disable 25356 text 46486
         //enable  1472  text 0

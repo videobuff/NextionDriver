@@ -156,10 +156,6 @@
 	}
 	
 
-	
-
-	
-
 	int readConfig(void) {
 	    #define BUFFER_SIZE 200
 	    int i,found,ok;
@@ -269,7 +265,17 @@
 	                writelog(LOG_DEBUG,"Found TX offset %d",TXoffset);
 	                found++;
 	            }
-	
+		            if (strcmp(key, "RXoff") == 0) {
+	                strcpy(location,value);
+	                writelog(LOG_DEBUG,"Found RX Offset %s",location);
+	                found++;
+	            }
+	            if (strcmp(key, "TXoff") == 0) {
+	                strcpy(location,value);
+	                writelog(LOG_DEBUG,"Found TXOffset %s",location);
+	                found++;
+	            }
+
 
 	        }
 	 

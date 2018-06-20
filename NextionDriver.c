@@ -327,6 +327,7 @@ int main(int argc, char *argv[])
             case 'V':
                 printf("\nNextionDriver version %s\n", NextionDriver_VERSION);
                 printf("Copyright (C) 2017,2018 ON7LDS. All rights reserved.\n\n");
+               printf("Adapted by PA0ESH FOR TX and RX Offset reading.\n\n");
                 return 0;
                 break;
             case 'v':
@@ -358,7 +359,7 @@ int main(int argc, char *argv[])
                 printf("  -v\tverbose (when running in daemon mode, dumps logging to syslog)\n");
                 printf("  -V\tdisplay version and exit\n");
                 printf("  -h\tthis help.\n\n");
-                printf("Example : %s -n /dev/ttyAMA0 -m /dev/ttyNextionDriver\n\n", argv[0]);
+                printf("Example : %s -n /dev/ttyUSB0 -m /dev/ttyNextionDriver\n\n", argv[0]);
                 printf("Note: more options are possible by just specifying the configuration file.\n");
                 printf(" All settings in the configuration file take priority over the options on the commandline.\n\n\n");
 

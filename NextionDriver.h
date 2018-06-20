@@ -67,8 +67,9 @@ int gelezen;
 int check;
 int page,changepages;
 char ipaddr[100];
-char RXoff;
-char TXoff;
+
+char RXoff[100];
+char TXoff[100];
 
 unsigned int RXfrequency,TXfrequency,RXoffset,TXoffset;
 	group_t groups[MAXGROUPS];

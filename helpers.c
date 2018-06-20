@@ -267,12 +267,12 @@
 	            }
 		            if (strcmp(key, "RXoff") == 0) {
 	                strcpy(location,value);
-	                writelog(LOG_DEBUG,"Found RX Offset %s",location);
+	                writelog(LOG_DEBUG,"Found RX Offset %s",RXoff);
 	                found++;
 	            }
 	            if (strcmp(key, "TXoff") == 0) {
 	                strcpy(location,value);
-	                writelog(LOG_DEBUG,"Found TXOffset %s",location);
+	                writelog(LOG_DEBUG,"Found TXOffset %s",TXoff);
 	                found++;
 	            }
 

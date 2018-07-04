@@ -254,20 +254,19 @@
 	        }
 	
 
-	      if (ok==16) {
-	      	            if (strcmp(key, "RXOffset") == 0) {
-	                strcpy(RXOffset,value);
+	        if (ok==16) {
+	            if (strcmp(key, "RXOffset") == 0) {
+	                strcpy(rxoff,value);
 	                writelog(LOG_DEBUG,"Found RX Offset %s",rxoff);
 	                found++;
 	            }
 	            if (strcmp(key, "TXOffset") == 0) {
-	                strcpy(TXOffset,value);
-	                writelog(LOG_DEBUG,"Found TX Offset %s",txoff;
+	                strcpy(txoff,value);
+	                writelog(LOG_DEBUG,"Found RX Offset %s",txoff);
 	                found++;
 	            }
 
-
-	        }
+	        }  
 	 
 	        if (ok==20) {
 	            if (strcmp(key, "ChangePagesMode") == 0) {

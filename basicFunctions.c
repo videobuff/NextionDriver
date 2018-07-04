@@ -152,7 +152,7 @@ void basicFunctions() {
             sprintf(text, "t130.txt=\"%3.3f MHz\"",fy);
 	        sendCommand(text);	
 
-	        RXOffset
+	        //RXOffset
 	        float fz;
 	        fz=RXoffset;
             sprintf(text, "t132.txt=\"%3.3f MHz\"",fz);

@@ -1,5 +1,10 @@
 NextionDriver (for MMDVMHost)
 =============================
+Note for Jumbospot users
+This driver works only with USB,
+ and not yet wit /dv/ttyAMA0.
+04072018 - PA0ESH
+=============================
 
 The purpose of this program is to provide additional control for
 Nextion display layouts other than the MMDVMHost supplied layouts.
@@ -7,7 +12,7 @@ It does this by sitting between MMDVMHost and the Nextion Display.
 This program takes the commands, sent by MMDVMHost and translates,
 changes, adds or removes these commands.
 
-The program will have to read MMDVM.ini to know the Layout, so it
+The program will have to read /etc/mmdvmhost to know the Layout, so it
 can set the baudrate accordingly.
 
 The program can take some commandline parameters, but it also is 
@@ -54,6 +59,10 @@ you should have a binary
   
 You can start this program in _debug mode_, then all commands that are sent
 to the display, will be printed to stdout.
+
+./NextionDriver -c /etc//etc/mmdvmhost -d -vvv
+
+
 Or you can start this program in _normal mode_, then it will go to the 
 background and do its work quietly (start and stop of the program
 will be logged in syslog)  
@@ -62,7 +71,7 @@ The most practical way to start is by specifying only one parameter:
  the place of the MMDVMHost configuration file. 
 This way, all configuration can be done in the ini file.
 
-./NextionDriver -c /etc/MMDVM.ini
+./NextionDriver -c /etc//etc/mmdvmhost
 
 will start NextionDriver from the current directory and read all parameters from
 the MMDVMHost ini file.
@@ -77,11 +86,11 @@ Then the script will make a backup of your current config and do the changes for
 
 
 In case you want to do it by hand :
-In your MMDVMHost configuration file (mostly MMDVM.ini), make a section as below:
+In your MMDVMHost configuration file (mostly /etc/mmdvmhost), make a section as below:
 
 ```
 [NextionDriver]
-Port=/dev/ttyAMA0
+Port=/dev/ttyUSB0
 LogLevel=2
 DataFilesPath=/opt/NextionDriver/
 GroupsFile=groups.txt
@@ -90,7 +99,7 @@ DMRidFile=stripped.csv
 
 
 **IMPORTANT**
-In the MMDVM.ini [Nextion] section you have to specify the NextionDriver's
+In the /etc/mmdvmhost [Nextion] section you have to specify the NextionDriver's
 virtual port as the port to connect to :
 ```
 [Nextion]
@@ -121,7 +130,7 @@ BindsTo=nextion-helper.service
 User=root
 WorkingDirectory=/opt/MMDVMHost
 ExecStartPre=/bin/sleep 3
-ExecStart=/usr/bin/screen -S MMDVMHost -D -m /opt/MMDVMHost/MMDVMHost /opt/MMDVM.ini
+ExecStart=/usr/bin/screen -S MMDVMHost -D -m /opt/MMDVMHost/MMDVMHost /opt//etc/mmdvmhost
 ExecStop=/usr/bin/screen -S MMDVMHost -X quit
 
 [Install]
@@ -145,7 +154,7 @@ Before= mmdvmhost.service
 User=root
 WorkingDirectory=/opt/MMDVMHost
 Type=forking
-ExecStart=/opt/NextionDriver/NextionDriver -c /opt/MMDVM.ini
+ExecStart=/opt/NextionDriver/NextionDriver -c /opt//etc/mmdvmhost
 ExecStop=/usr/bin/killall NextionDriver
 
 [Install]

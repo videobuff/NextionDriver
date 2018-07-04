@@ -255,22 +255,22 @@
 	
 
 	      if (ok==16) {
-	            if (strcmp(key, "RXOffset") == 0) {
-	                RXoffset = (unsigned int)atoi(value);
-	                writelog(LOG_DEBUG,"Found RX offset %d",RXoffset);
-	                found++;
-	            }
-	            if (strcmp(key, "TXOffset") == 0) {
-	                TXoffset = (unsigned int)atoi(value);
-	                writelog(LOG_DEBUG,"Found TX offset %d",TXoffset);
-	                found++;
-	            }
-		            if (strcmp(key, "RXoff") == 0) {
+	            //if (strcmp(key, "RXOffset") == 0) {
+	            //    RXoffset = (unsigned int)atoi(value);
+	            //    writelog(LOG_DEBUG,"Found RX offset %d",RXoffset);
+	            //    found++;
+	            //}
+	            //if (strcmp(key, "TXOffset") == 0) {
+	            //    TXoffset = (unsigned int)atoi(value);
+	            //    writelog(LOG_DEBUG,"Found TX offset %d",TXoffset);
+	            //    found++;
+	           // }
+		            if (strcmp(key, "RXoffset") == 0) {
 	                strcpy(RXoff,value);
 	                writelog(LOG_DEBUG,"Found RX Offset %s",RXoff);
 	                found++;
 	            }
-	            if (strcmp(key, "TXoff") == 0) {
+	            if (strcmp(key, "TXoffset") == 0) {
 	                strcpy(TXoff,value);
 	                writelog(LOG_DEBUG,"Found TX Offset %s",TXoff);
 	                found++;

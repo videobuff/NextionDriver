@@ -66,7 +66,8 @@ void basicFunctions() {
     //  * regularly check IP interface and send to display
     //  * get CPU temperature & frequency & load average 
     //       and send to display
-    //  * send RX frequency and location (info from MMDVM.ini)
+    //  * send RX frequency and location (info from /etc/mmdvmhost)
+    //  * send RXoffset & TXoffset  frequency (info from /etc/mmdvmhost)
     //--------------------------------------------------------------
     if ((page==0)&&(strstr(TXbuffer,"t2.txt=\"MMDVM STOPPED\"")>0)){
         sprintf(TXbuffer, "t30.txt=\"\"");

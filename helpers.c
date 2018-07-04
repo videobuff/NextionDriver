@@ -256,12 +256,12 @@
 
 	      if (ok==16) {
 	      	            if (strcmp(key, "RXOffset") == 0) {
-	                strcpy(location,value);
+	                strcpy(RXOffset,value);
 	                writelog(LOG_DEBUG,"Found RX Offset %s",rxoff);
 	                found++;
 	            }
 	            if (strcmp(key, "TXOffset") == 0) {
-	                strcpy(location,value);
+	                strcpy(TXOffset,value);
 	                writelog(LOG_DEBUG,"Found TX Offset %s",txoff;
 	                found++;
 	            }

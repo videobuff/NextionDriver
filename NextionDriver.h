@@ -45,6 +45,8 @@ char configFile[200];
 char datafiledir[500];
 char groupsFile[100],usersFile[100];
 char location[200];
+char rxoff[200];
+char txoff[200];
 int verbose, screenLayout;
 
 typedef struct groupdata
@@ -67,9 +69,6 @@ int gelezen;
 int check;
 int page,changepages;
 char ipaddr[100];
-
-char RXoff[100];
-char TXoff[100];
 
 unsigned int RXfrequency,TXfrequency,RXoffset,TXoffset;
 	group_t groups[MAXGROUPS];

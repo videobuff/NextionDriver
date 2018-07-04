@@ -145,18 +145,26 @@ void basicFunctions() {
 	        //Location
 	        sprintf(text, "t31.txt=\"%s\"",location);
 	        sendCommand(text);
+	        
+	        //RX Offset
+	        sprintf(text, "t130.txt=\"%s\"",rxoff);
+	        sendCommand(text);
+	        //TX offset
+	        sprintf(text, "t132.txt=\"%s\"",txoff);
+	        sendCommand(text);
+
 
 	        //TXOffset
-	        float fy;
-	        fy=TXoffset;
-            sprintf(text, "t130.txt=\"%3f MHz\"",fy);
-	        sendCommand(text);	
+	        //float fy;
+	        //fy=TXoffset;
+            //sprintf(text, "t130.txt=\"%3f MHz\"",fy);
+	        //sendCommand(text);	
 
 	        //RXOffset
-	        float fz;
-	        fz=RXoffset;
-            sprintf(text, "t132.txt=\"%3f MHz\"",fz);
-	        sendCommand(text);
+	        //float fz;
+	        //fz=RXoffset;
+            //sprintf(text, "t132.txt=\"%3f MHz\"",fz);
+	        //sendCommand(text);
 	
 
         //disable 25356 text 46486

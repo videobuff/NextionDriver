@@ -147,10 +147,10 @@ void basicFunctions() {
 	        sendCommand(text);
 	        
 	        //RX Offset
-	        sprintf(text, "t130.txt=\"%s\"",rxoff);
+	        sprintf(text, "t130.txt=\"%s Hz\"",rxoff);
 	        sendCommand(text);
 	        //TX offset
-	        sprintf(text, "t132.txt=\"%s\"",txoff);
+	        sprintf(text, "t132.txt=\"%s\ Hz"",txoff);
 	        sendCommand(text);
 
 

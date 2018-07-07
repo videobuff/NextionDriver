@@ -1,6 +1,6 @@
 /*
  *   Copyright (C) 2017,2018 by Lieven De Samblanx ON7LDS
- *
+ *   Adapted by PA0ESH for inclusion of TX & RX Offset.
  *   This program is free software; you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
  *   the Free Software Foundation; either version 2 of the License, or
@@ -152,20 +152,6 @@ void basicFunctions() {
 	        //TX offset
 	        sprintf(text, "t132.txt=\"%s Hz\"",txoff);
 	        sendCommand(text);
-
-
-	        //TXOffset
-	        //float fy;
-	        //fy=TXoffset;
-            //sprintf(text, "t130.txt=\"%3f MHz\"",fy);
-	        //sendCommand(text);	
-
-	        //RXOffset
-	        //float fz;
-	        //fz=RXoffset;
-            //sprintf(text, "t132.txt=\"%3f MHz\"",fz);
-	        //sendCommand(text);
-	
 
         //disable 25356 text 46486
         //enable  1472  text 0

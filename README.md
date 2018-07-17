@@ -1,12 +1,8 @@
 NextionDriver (for MMDVMHost)
 =============================
-Note for Jumbospot users
-This driver works only with USB,
-and not yet wit /dv/ttyAMA0.
-Extra functions are reading the 
-offset frequency for DMR
-Only mode tested so far is DMR
-04072018 - PA0ESH
+This is a fork and Work in progress from ON7LDS. Note for Jumbospot users: This driver works only with USB,
+and not yet wit /dv/ttyAMA0. Extra functions are reading the offset frequency for DMR and some updating of software and firmware.
+Only mode tested so far is DMR/ 04072018 - PA0ESH
 =============================
 
 The purpose of this program is to provide additional control for

@@ -59,7 +59,7 @@ you should have a binary
 You can start this program in _debug mode_, then all commands that are sent
 to the display, will be printed to stdout.
 
-./NextionDriver -c /etc//etc/mmdvmhost -d -vvv
+./NextionDriver -c /etc/mmdvmhost -d -vvv
 
 
 Or you can start this program in _normal mode_, then it will go to the 

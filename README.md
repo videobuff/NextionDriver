@@ -143,7 +143,7 @@ where you tell it needs to start before MMDVMHost :
 
 
 nextion-helper.service
-```
+
 [Unit]
 Description=Nextion Helper Service Service
 After=syslog.target network.target
@@ -151,14 +151,14 @@ Before= mmdvmhost.service
 
 [Service]
 User=root
-WorkingDirectory=/opt/MMDVMHost
+WorkingDirectory=/opt/NextionDriver
 Type=forking
-ExecStart=/opt/NextionDriver/NextionDriver -c /opt//etc/mmdvmhost
+ExecStart=/opt/NextionDriver/NextionDriver -c /etc/mmdvmhost
 ExecStop=/usr/bin/killall NextionDriver
 
 [Install]
 WantedBy=multi-user.target
-```
+
 
 How to change this program to your needs ?
 ==========================================

@@ -19,7 +19,11 @@
 #if !defined(NextionDriver_H)
 #define NextionDriver_H
 
+<<<<<<< HEAD
 #define NextionDriver_VERSION "1.02esh"
+=======
+#define NextionDriver_VERSION "1.04"
+>>>>>>> on7lds/master
 
 #define TRUE	1
 #define FALSE	0
@@ -33,6 +37,9 @@
 #define USERSFILE			"stripped.csv"
 #define MAXGROUPS			1500
 #define MAXUSERS			120000
+
+#define MODEM_DISPLAY 0
+#define MMDVM_DISPLAY 1
 
 #define BAUDRATE3	B9600
 #define BAUDRATE4	B115200
@@ -67,7 +74,7 @@ typedef struct userdata
 
 int gelezen;
 int check;
-int page,changepages;
+int page,changepages,removeDim;
 char ipaddr[100];
 
 unsigned int RXfrequency,TXfrequency,RXoffset,TXoffset;
@@ -78,8 +85,11 @@ unsigned int RXfrequency,TXfrequency,RXoffset,TXoffset;
 int fd1,fd2;
 int become_daemon;
 
-int modeIsEnabled[14];
-int netIsActive[7];
+int modeIsEnabled[20];
+int netIsActive[10];
+
+int transparentIsEnabled,sendFrameType;
+char remotePort[10],localPort[10];
 
 char TXbuffer[1024],RXbuffer[1024];
 

@@ -13,7 +13,6 @@
 
 #Where do we find the data files (groups and DMR is's)
 DATAFILES="/opt/NextionDriver"
-
 #########################################################
 
 if [ "$1" == "" ]; then
